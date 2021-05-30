@@ -19,5 +19,7 @@ This application allows users to post, comment and share their thoughts with oth
 * Sequelize
 * MySQL2
 * Express
+* dotenv
 
 ## Deployed Application
+TBD
