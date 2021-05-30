@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="background-color: #ede7f6" class="black-text text-lighten-5">
+    <div class="container" class="center-align">
+        <nav style="background-color:#80d8ff" class="width:100%">
+            <div class="navbar-fixed">
+                <a href="/" class="brand-logo">Tech Blog</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        {{#if loggedIn}}
+                        <button id="logout" class="waves-effect waves-red lighten-2 btn-flat">Logout</button>
+                        {{else}}
+                        <a href="/login">Login</a>
+                        {{/if}}
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            {{{ body }}}
+        </main>
+        <footer class="center-align">
+            &#169; Tech Blog
+        </footer>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
